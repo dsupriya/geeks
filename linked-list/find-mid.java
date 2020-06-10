@@ -1,22 +1,18 @@
 //https://practice.geeksforgeeks.org/problems/finding-middle-element-in-a-linked-list/1/?track=amazon-linkedlists&batchId=192
-class GFG
+class Solution
 {
-    // Function to find middle element a linked list
     int getMiddle(Node head)
-   {
-       Node temp = head ;
-       //temp=head;
-       int count =0;
-        while(temp != null)
-           { temp=temp.next;
-              count++;}
-              
-        count = (count/2)+1;
-        temp = head;
-        for(int i=1;i<count;i++)
+    {
+         // Your code here.
+         Node slow,fast;
+         slow=fast=head;
+         while(true)
         {
-            temp=temp.next;
+            slow = slow.next;
+            fast = (fast.next).next;
+            if(fast == null || fast.next == null)
+                break;
         }
-        return temp.data;
-   }
+        return slow.data;
+    }
 }
