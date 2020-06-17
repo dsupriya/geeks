@@ -32,4 +32,7 @@ Explanation:
 Testcase 1: All the 0s are segregated to the left end of the linked list, 2s to the right end of the list, and 1s in between.
 Testcase 2: After arranging all the 0s,1s and 2s in the given format, the output will be 0 1 2 2.
 
+
+1. Iterate through the linked list. Maintain 3 pointers named zero, one and two to point to current ending nodes of linked lists containing 0, 1, and 2 respectively. For every traversed node, we attach it to the end of its corresponding list. Finally we link all three lists. To avoid many null checks, we use three dummy pointers zeroD, oneD and twoD that work as dummy headers of three lists.
+
  
