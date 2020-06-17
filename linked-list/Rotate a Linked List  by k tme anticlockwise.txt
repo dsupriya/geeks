@@ -36,3 +36,13 @@ Testcase 1: After rotating the linked list by 4 elements (anti-clockwise), we re
 Testcase 2: After rotating the linked list by 3 elements (anti-clockwise), we will get the resulting linked list as 8 9 2 4 7.
 
 ** For More Input/Output Examples Use 'Expected Output' option **
+
+
+Algorithm:
+
+1. The task is to rotate the linked list by K nodes. Rotating a linked list will change head and tail of the linked list.
+2. So, start traversing the linked list (freeze a pointer on head itself as temp_head), when you reach Kth node (1-based indexing), freeze a pointer there on Kth (k_temp) and on (K+1)th as k1_temp node, also move till tail of the linked list (tail).
+3. Now, do following modifications,
+    -> k->next = NULL;
+    -> tail->next = head;
+    -> head = k1;
