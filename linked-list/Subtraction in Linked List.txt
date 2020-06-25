@@ -1,0 +1,35 @@
+Subtraction in Linked List 
+Given two linked lists that represent two large positive numbers. The task is to subtract the given two numbers represented by the linked list. Subtract the smaller from the larger one.
+
+Input:
+The first line of input contains an integer T denoting the number of test cases. Then T test cases follow. The first line of each test case contains an integer N denoting the size of the first linked list (L1)  In the next line are the space-separated values of the first linked list. The third line of each test case contains an integer M denoting the size of the second linked list (L2). In the fourth line are space-separated values of the second linked list.
+
+Output:
+For each test case, the output will be space-separated values of the resultant linked list. 
+
+User Task:
+The task is to complete the function subLinkedList() which should subtract the numbers represented by the linked list.
+
+Expected Time Complexity: O(N).
+Expected Auxiliary Space: O(N).
+
+Constraints:
+1 <= T <= 100
+1 <= N, M <= 10000
+
+Example:
+Input:
+1
+3
+1 0 0
+2
+1 2
+
+Output:
+8 8
+
+Explanation:
+Testcase 1: 12 subtracted from 100 gives us 88 as result.
+ 
+
+** For More Input/Output Examples Use 'Expected Output' option **
