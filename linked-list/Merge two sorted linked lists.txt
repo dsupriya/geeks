@@ -1,0 +1,46 @@
+Merge two sorted linked lists 
+Hint:
+1. Take a r_head node which should be the head of merged linked list. Two pointers seperate to the head of given linked lists as h1 and h2.
+2. Now, compare the head of the first and second linked list. Assign the r_head to the head of that linked list and increment head of that list to next. 
+    Also, take pointer temp which should keep track of the nodes in resultant merged list. First assigned to smallest node.
+3. Now, after following the above two steps you determined the first smallest node. Agai, move the h1 or h2 accordingly (whose node is smaller).
+4. Do the comparison again between h1 and h2. Also, whomsoever is smaller (move tail->next to that node), and tail = tail->next. Do the steps  
+    continuously till all nodes of any of the list gets exhausted.
+
+==================================================
+Given two sorted linked lists consisting of N and M nodes respectively. The task is to merge both of the list (in-place) and return head of the merged list.
+Note: It is strongly recommended to do merging in-place using O(1) extra space.
+
+Input:
+First line of input contains number of testcases T. For each testcase, first line of input contains N and M, and next two line contains N and M sorted elements in two lines for each.
+
+Output:
+For each testcase, print the merged list in sorted form.
+
+User Task:
+The task is to complete the function sortedMerge() which takes references to the heads of two linked lists as the arguments and returns the head of merged linked list.
+
+Expected Time Complexity : O(n+m)
+Expected Auxilliary Space : O(1)
+
+Constraints:
+1 <= T <= 100
+1 <= N, M <= 104
+1 <= Node's data <= 105
+
+Example:
+Input:
+2
+4 3
+5 10 15 40 
+2 3 20
+2 2
+1 1
+2 4 
+Output:
+2 3 5 10 15 20 40
+1 1 2 4
+
+Explanation:
+Testcase 1: After merging the two linked lists, we have merged list as 2, 3, 5, 10, 15, 20, 40.
+Testcase 2: After merging the given two linked list , we have 1, 1, 2, 4 as output.
