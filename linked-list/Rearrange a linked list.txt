@@ -1,0 +1,40 @@
+   
+LIVE   BATCHES
+Rearrange a linked list 
+Given a singly linked list, the task is to rearrange it in a way that all odd position nodes are together and all even positions node are together.
+Assume the first element to be at position 1 followed by second element at position 2 and so on.
+
+Input: 
+The first line of each testcase consists of the number of test cases T. For each testcase, there will be two lines, first of which contains the length of the linked list and next will contains the elements of the linked list.
+
+Output: 
+For each testcase, output the linked list after rearranging the nodes in it such that odd position nodes appear before even position nodes.
+
+User Task:
+The task is to complete the function rearrangeEvenOdd() which rearranges the nodes in the linked list as required.
+
+Expected Time Complexity: O(N).
+Expected Auxiliary Space: O(1).
+
+Constraints:
+1 <= T <= 100
+1 <= N <= 10000
+1 <= value <= 1000
+
+Example:
+Input:
+2
+4
+1 2 3 4
+5
+1 2 3 4 5
+
+Output:
+1 3 2 4
+1 3 5 2 4
+
+Explanation:
+Testcase 1: After rearranging the linked list elements in odd-even fashion 1, 3 are odd and they are together. Also, 2 and 4 are even and they are together.
+ 
+
+** For More Input/Output Examples Use 'Expected Output' option **
