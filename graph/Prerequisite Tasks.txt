@@ -1,0 +1,44 @@
+Prerequisite Tasks 
+There are a total of N tasks, labeled from 0 to N-1. Some tasks may have prerequisites, for example to do task 0 you have to first complete task 1, which is expressed as a pair: [0, 1]
+
+Given the total number of tasks and a list of prerequisite pairs, find if it is possible to finish all tasks.
+Hint:
+use topological sort
+and indegree
+==========================
+Input:
+First line of input contains number of test cases T. Then T test cases will follow. The first line of each test case contains N denoting the total number of tasks. This is followed by P denoting the total number of prerequisite pairs. This is followed by P lines each containing a dependency pair.
+
+Output:
+Print Yes if it is possible to finish all tasks otherwise print No.
+
+User Task:
+The task is to complete the function canFinish that takes the total number of tasks and prerequisite pairs as input and returns the desired boolean value. 
+
+Expected Time Complexity: O(N + P).
+Expected Auxiliary Space: O(N + P).
+
+Constraints: 
+1 <= T <= 10^5
+1 <= N <= 100
+
+Example:
+Input:
+2
+4
+3
+1 0
+2 1
+3 2
+2
+2
+1 0
+0 1
+Output:
+Yes
+No
+
+Explanation: 
+Testcase 2: To do task 1 you should have completed task 0, and to do task 0 you should have finished task 1. So it is impossible
+
+** For More Input/Output Examples Use 'Expected Output' option **
