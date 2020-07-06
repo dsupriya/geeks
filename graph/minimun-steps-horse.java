@@ -74,7 +74,7 @@ class Solution {
     public int minStepToReachTarget(int k[], int t[], int n) {
         // Write your code here
        
-        int path = BFS(n,k[1]-1,k[0]-1,t[1]-1,t[0]-1);
+        int path = BFS(n,k[0]-1,k[1]-1,t[0]-1,t[1]-1);
         
          return path;
     }
@@ -97,8 +97,8 @@ class Solution {
         LinkedList <Cell> q = new LinkedList <Cell>();
         Cell start = new Cell(c_r,c_c);
         q.add(start);
-        int [] neigh = new int[]{2,-1,2,1,-2,-1,-2,1,
-                                   -1,-2,1,-2,1,-2,1,2};
+        int dx[] = { -2, -1, 1, 2, -2, -1, 1, 2 }; 
+        int dy[] = { -1, -2, -2, -1, 1, 2, 2, 1 }; 
         int row,col;
         
         while(q.isEmpty()!= true)
@@ -106,15 +106,16 @@ class Solution {
             Cell temp = q.remove(0);
             c_r = temp.x;
             c_c = temp.y;
+            //System.out.println(c_r+" "+c_c);
             if(c_r==t_r && c_c ==t_c)
                 return distance[c_r][c_c];
                         
                     
-            for(int i=0;i<16;i=i+2)
+            for(int i=0;i<8;i++)
             {
-                row = c_r+neigh[i];
-                col = c_c+neigh[i+1];
-                if(row>=0 && col>=0 && row<n && col<n && distance[row][col]>(1+distance[c_r][c_c]))
+                row = c_r+dx[i];
+                col = c_c+dy[i];
+                if(row>=0 && col>=0 && row<n && col<n && visited[row][col]==false)
                 {
                     visited[row][col] = true;
                     distance[row][col] = 1+distance[c_r][c_c];
@@ -124,7 +125,6 @@ class Solution {
                     
                     
                         
-                    
                 }
             }
             
